@@ -5,6 +5,7 @@
     <title>Document</title>
 </head>
 <body>
+    <center>
     <div id="app"></div>
     
     <script
@@ -25,8 +26,8 @@
       firebase.initializeApp(config);
       var controlRef = firebase.database().ref('control');
       $('#app').html(`
-            <center><button onclick="firebaseSwitch(1)">LED ON</button>
-            <button onclick="firebaseSwitch(2)">LED OFF</button></center>
+            <button onclick="firebaseSwitch(1)">LED ON</button>
+            <button onclick="firebaseSwitch(2)">LED OFF</button>
         `);
         function firebaseSwitch(state){
             switch(state){
@@ -45,5 +46,6 @@
             }
         }
     </script>
+        </center>
 </body>
 </html>
