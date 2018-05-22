@@ -6,7 +6,7 @@
 </head>
 <body>
     <div id="app"></div>
-
+    
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -25,8 +25,8 @@
       firebase.initializeApp(config);
       var controlRef = firebase.database().ref('control');
       $('#app').html(`
-            <button onclick="firebaseSwitch(1)">LED ON</button>
-            <button onclick="firebaseSwitch(2)">LED OFF</button>
+            <center><button onclick="firebaseSwitch(1)">LED ON</button>
+            <button onclick="firebaseSwitch(2)">LED OFF</button></center>
         `);
         function firebaseSwitch(state){
             switch(state){
